@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-const App = (): React.ReactElement => {
+const PopupApp = (): React.ReactElement => {
   return <div>Hello</div>;
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<PopupApp />, document.getElementById("root"));

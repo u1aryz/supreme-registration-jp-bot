@@ -6,6 +6,7 @@
     "clean": "rimraf *.js",
     "lint": "eslint src/**/*.{ts,tsx} --fix",
     "dev": "webpack --config webpack/webpack.dev.js",
+    "watch": "webpack --config webpack/webpack.dev.js --watch",
     "prod": "webpack --config webpack/webpack.prod.js"
   },
   "husky": {
@@ -23,6 +24,7 @@
     "@types/chrome": "^0.0.91",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
+    "@types/uuid": "^3.4.6",
     "@typescript-eslint/eslint-plugin": "^2.13.0",
     "@typescript-eslint/parser": "^2.13.0",
     "eslint": "^6.8.0",
@@ -47,8 +49,10 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "@material-ui/core": "^4.8.2",
     "chrome-promise": "^3.0.5",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "uuid": "^3.3.3"
   }
 }

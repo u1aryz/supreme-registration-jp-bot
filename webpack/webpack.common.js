@@ -19,7 +19,7 @@ module.exports = {
     "js/background": path.resolve(__dirname, "../src/background.ts"),
     "js/content-script": path.resolve(__dirname, "../src/content-script.ts"),
     "js/options": path.resolve(__dirname, "../src/options/index.tsx"),
-    "js/popup": path.resolve(__dirname, "../src/popup.tsx"),
+    "js/popup": path.resolve(__dirname, "../src/popup/index.tsx"),
   },
 
   module: {

@@ -34,7 +34,7 @@ export default memo(() => {
             name: "",
             email: "",
             tel: "",
-            location: "tokyo",
+            location: "area_tokyo",
           },
         ];
       case "EDIT":

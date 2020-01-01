@@ -83,10 +83,10 @@ export default memo(
             value={registration.location}
             onChange={(event) => onChangeValue("location", event.target.value as string)}
           >
-            <MenuItem value="tokyo">Tokyo</MenuItem>
-            <MenuItem value="osaka">Osaka</MenuItem>
-            <MenuItem value="nagoya">Nagoya</MenuItem>
-            <MenuItem value="fukuoka">Fukuoka</MenuItem>
+            <MenuItem value="area_tokyo">Tokyo</MenuItem>
+            <MenuItem value="area_osaka">Osaka</MenuItem>
+            <MenuItem value="area_nagoya">Nagoya</MenuItem>
+            <MenuItem value="area_fukuoka">Fukuoka</MenuItem>
           </Select>
         </div>
         <div style={{position: "relative"}}>

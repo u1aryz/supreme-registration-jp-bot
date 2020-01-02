@@ -61,7 +61,7 @@ class Background {
 
   private onSetClick(when: number): void {
     const delay = when - Date.now();
-    this.updateStatus({alarm: {when, isSet: true}, message: "Alarm was set..."});
+    this.updateStatus({alarm: {when, isSet: true}, message: "アラーム設定中..."});
     this.timeoutId = setTimeout(() => this.onAlarmStart(), delay);
   }
 
@@ -72,14 +72,14 @@ class Background {
     }
     const oldAlarm = this.status.alarm;
     const newAlarm = {...oldAlarm, isSet: false};
-    this.updateStatus({alarm: newAlarm, message: "Alarm stopped!"});
+    this.updateStatus({alarm: newAlarm, message: "アラームを解除しました"});
   }
 
   private onAlarmStart(): void {
     // TODO
     const oldAlarm = this.status.alarm;
     const newAlarm = {...oldAlarm, isSet: false};
-    this.updateStatus({alarm: newAlarm, message: "Alarm started!"});
+    this.updateStatus({alarm: newAlarm, message: "アラームの時間になりました"});
   }
 
   private updateStatus(status: Status): void {

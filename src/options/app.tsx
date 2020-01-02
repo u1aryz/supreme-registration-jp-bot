@@ -89,10 +89,10 @@ export default memo(() => {
         return <Item key={value.id} registration={value} onChange={onChange} onDelete={onDelete} />;
       })}
       <Button variant="contained" type="button" onClick={onAddClick}>
-        Add
+        追加
       </Button>
       <Button variant="contained" type="button" onClick={onSaveClick}>
-        Save
+        保存
       </Button>
     </div>
   );

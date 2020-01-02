@@ -45,7 +45,7 @@ export default memo(
       <div className={classes.root}>
         <div>
           <TextField
-            label="Name"
+            label="名前"
             placeholder="Taro Yamada"
             value={registration.name}
             onChange={(event) => onChangeValue("name", event.target.value)}
@@ -56,7 +56,7 @@ export default memo(
         </div>
         <div>
           <TextField
-            label="Email"
+            label="メールアドレス"
             placeholder="taro@supremenewyork.com"
             value={registration.email}
             onChange={(event) => onChangeValue("email", event.target.value)}
@@ -67,7 +67,7 @@ export default memo(
         </div>
         <div>
           <TextField
-            label="Cellphone"
+            label="携帯電話"
             placeholder="09011112222"
             value={registration.tel}
             onChange={(event) => onChangeValue("tel", event.target.value)}
@@ -77,7 +77,7 @@ export default memo(
           />
         </div>
         <div>
-          <InputLabel id="location-label">Location</InputLabel>
+          <InputLabel id="location-label">ロケーション</InputLabel>
           <Select
             labelId="location-label"
             value={registration.location}
@@ -96,7 +96,7 @@ export default memo(
             color="secondary"
             onClick={() => onDelete(registration)}
           >
-            Delete
+            削除
           </Button>
         </div>
       </div>

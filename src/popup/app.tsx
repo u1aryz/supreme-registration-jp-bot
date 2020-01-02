@@ -37,7 +37,7 @@ export default memo(() => {
     if (alarm?.when) {
       port.postMessage({eventType: EventType.AlarmSetClicked, data: alarm.when});
     } else {
-      setMessage("Invalid time");
+      setMessage("日時が不正です");
     }
   };
 
@@ -54,7 +54,7 @@ export default memo(() => {
     <div className={classes.root}>
       <div>
         <TextField
-          label="Start time"
+          label="実行日時"
           type="datetime-local"
           value={alarm?.when ? dayjs(alarm.when).format("YYYY-MM-DDTHH:mm:ss") : ""}
           onChange={onTimeChange}
@@ -70,12 +70,12 @@ export default memo(() => {
       </div>
       <div>
         <Button variant="contained" color="primary" fullWidth disabled={alarm?.isSet} onClick={onSetClick}>
-          Set alarm
+          アラームをセット
         </Button>
       </div>
       <div>
         <Button variant="contained" fullWidth disabled={!alarm?.isSet} onClick={onStopClick}>
-          Stop alarm
+          アラームを解除
         </Button>
       </div>
       {message && <div>{message}</div>}

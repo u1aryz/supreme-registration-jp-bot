@@ -1,6 +1,6 @@
 import chromep from "chrome-promise";
 import * as dayjs from "dayjs";
-import {Alarm, EventType, Status} from "./model";
+import {Alarm, EventType, Registration, Status} from "./model";
 
 import TabChangeInfo = chrome.tabs.TabChangeInfo;
 import Port = chrome.runtime.Port;
@@ -62,7 +62,7 @@ class Background {
   private onSetClick(when: number): void {
     const delay = when - Date.now();
     this.updateStatus({alarm: {when, isSet: true}, message: "アラーム設定中..."});
-    this.timeoutId = setTimeout(() => this.onAlarmStart(), delay);
+    this.timeoutId = setTimeout(async () => this.onAlarmStart(), delay);
   }
 
   private onStopClick(): void {
@@ -75,8 +75,12 @@ class Background {
     this.updateStatus({alarm: newAlarm, message: "アラームを解除しました"});
   }
 
-  private onAlarmStart(): void {
-    // TODO
+  private async onAlarmStart(): Promise<void> {
+    const store: {registrations?: Registration[]} = await chromep.storage.local.get();
+    store.registrations?.forEach((value) => {
+      chrome.tabs.create({url: `https://japan.supremenewyork.com/?id=${value.id}`});
+    });
+
     const oldAlarm = this.status.alarm;
     const newAlarm = {...oldAlarm, isSet: false};
     this.updateStatus({alarm: newAlarm, message: "アラームの時間になりました"});

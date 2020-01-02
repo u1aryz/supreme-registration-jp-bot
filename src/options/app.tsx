@@ -58,7 +58,7 @@ export default memo(() => {
   useEffect(() => {
     (async () => {
       const store: {registrations?: Registration[]} = await chromep.storage.local.get();
-      if (store.registrations) {
+      if (store.registrations?.length) {
         store.registrations.forEach((value) => dispatch({type: "ADD", item: value}));
       } else {
         // No data in storage

@@ -63,6 +63,7 @@ export default memo(
             InputLabelProps={{
               shrink: true,
             }}
+            style={{width: 250}}
           />
         </div>
         <div>

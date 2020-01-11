@@ -1,6 +1,6 @@
 import chromep from "chrome-promise";
 import {sleep} from "./utils";
-import {Registration} from "./model";
+import {Registration} from "./types";
 
 const submit = (registration: Registration): void => {
   // Name

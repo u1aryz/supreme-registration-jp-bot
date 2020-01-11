@@ -3,7 +3,7 @@ import * as uuid from "uuid";
 import {Button, Theme} from "@material-ui/core";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import chromep from "chrome-promise";
-import {Registration} from "../model";
+import {Registration} from "../types";
 import Item from "./item";
 
 const {memo, useEffect, useReducer} = React;

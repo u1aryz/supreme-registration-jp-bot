@@ -1,6 +1,6 @@
 import chromep from "chrome-promise";
 import * as dayjs from "dayjs";
-import {Alarm, EventType, Registration, Status} from "./model";
+import {Alarm, EventType, Registration, Status} from "./types";
 
 import TabChangeInfo = chrome.tabs.TabChangeInfo;
 import Port = chrome.runtime.Port;

@@ -3,7 +3,7 @@ import * as React from "react";
 import {TextField, Theme} from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import {Alarm, EventType, Status} from "../model";
+import {Alarm, EventType, Status} from "../types";
 
 import IncomingMessage = chrome.gcm.IncomingMessage;
 

@@ -8,7 +8,7 @@ const submit = (registration: Registration): void => {
   // Email
   (document.querySelector("#register input:nth-child(6)") as HTMLInputElement).value = registration.email;
   // Cellphone
-  (document.querySelector("#register input:nth-child(7)") as HTMLInputElement).value = registration.tel;
+  (document.querySelector("#register input:nth-child(8)") as HTMLInputElement).value = registration.tel;
   // Location
   (document.getElementById(registration.location) as HTMLInputElement).checked = true;
   // Agree to terms

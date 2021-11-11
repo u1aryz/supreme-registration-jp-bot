@@ -2,6 +2,12 @@
   "name": "supreme-registration-jp-bot",
   "version": "0.0.1",
   "manifest_version": 2,
+  "cross_origin_embedder_policy": {
+    "value": "require-corp"
+  },
+  "cross_origin_opener_policy": {
+    "value": "same-origin"
+  },
   "background": {
     "scripts": [
       "js/background.js"

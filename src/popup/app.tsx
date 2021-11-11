@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 export default memo(() => {
   const classes = useStyles();
   const [alarm, setAlarm] = useState<Alarm>();
-  const [message, setMessage] = useState();
+  const [message, setMessage] = useState<string>();
   const [port] = useState(() => chrome.runtime.connect());
 
   useEffect(() => {
